@@ -803,12 +803,12 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'mydrupal',
-  'username' => 'ipunkz11',
-  'password' => 'pandeglang11',
+  'database' => 'cobadrupal',
+  'username' => 'admin',
+  'password' => 'JkyovEi0',
   'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
+  'host' => 'mysql-47309-0.cloudclusters.net',
+  'port' => '18931',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
