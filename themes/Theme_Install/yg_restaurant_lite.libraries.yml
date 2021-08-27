@@ -1,0 +1,22 @@
+global-styling:
+  css:
+    base:
+      'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Courgette': { type: external, minified: true }
+      assets/css/bootstrap.min.css: {}
+      assets/css/custom.css: {}
+      assets/css/font-awesome.min.css: {}
+      
+
+  js:
+    # 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js': { type: external, minified: true }
+    assets/jscript/bootstrap.min.js: {}
+    assets/jscript/smoothScroll.js: {}
+    assets/jscript/isotope.js: {}
+    assets/jscript/main.js: {}
+
+
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery

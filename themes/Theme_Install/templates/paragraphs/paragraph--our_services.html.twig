@@ -1,0 +1,19 @@
+<!--services section start-->
+<section class="services-sec">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="main-heading">
+                    <span>{{ content.field_about_sub_title.0 }}</span>
+                    <h2>{{ content.field_about_title.0 }}</h2>
+                    <img src="{{ file_url(content.field_about_header_image['#items'].entity.uri.value) }}" class="img-responsive">
+                </div>
+            </div>
+
+            {{ content.field_service_list }}
+
+        </div>
+    </div>
+</section>
+<!--services section end-->

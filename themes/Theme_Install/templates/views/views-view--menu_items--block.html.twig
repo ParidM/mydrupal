@@ -1,0 +1,64 @@
+
+<!--menu page section start-->
+<section class="our-menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-heading">
+                    <span>{{menu_subtitle}}</span>
+                    <h2>{{ menu_title }}</h2>
+                    <img src="{{directory}}" class="img-responsive">
+                </div>
+                
+                <p class="text-center">{{ header }}</p>
+                <div id="main" class="main">
+                    <div class="primary-content">
+                        <div class="big-demo go-wide" data-js-module="filtering-demo">
+                            <!-- filters  -->
+                            <div class="filter-button-group button-group js-radio-button-group container">
+                                <div class="filter-inner">
+                                <button class="btn btn-sm btn-default button is-checked" data-filter="*">All</button>
+                                {% set arr = [] %}
+                                 {% for result in view.result %}
+                                 {% set a = view.field.name.value(view.result[loop.index-1]) %}
+                                 {% if a is defined %}
+                                 {% set arr = arr|merge({(a): (a)}) %}
+                                 {% endif %}
+                                 {% endfor %}
+                                 {% for key, result in arr %}
+                                    <button class="btn btn-sm btn-default button" data-filter=".{{ key|lower|replace({' ':'-'}) }}">{{ key }}
+                                    </button>
+                                {% endfor %}   
+                                </div>
+                            </div>
+                           <!-- filters -->
+                            <ul class="clearfix grid">
+                            {% for result in view.result %}
+                               {% set a = view.field.name.value(view.result[loop.index-1]) %}
+                               {% if a is defined %}
+                               {% set class = a|lower|replace({' ':'-'}) %}
+                               {% else %}
+                               {% set class = '' %}
+                               {% endif %}
+                                <li class="{{ class }} element-item" data-category="{{ class }}">
+                                        <div class="menu-img">
+                                            <img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}">
+                                        </div>
+                                        <div class="menu-content">
+                                            <h5> {{ view.field.field_dish_name.value(view.result[loop.index-1]) }}</h5>
+                                            <p>{{ view.field.field_more_dishes.value(view.result[loop.index-1]) }}</p>
+                                        </div>
+                                        <div class="AddCart">
+                                            <span>{{ view.field.field_menu_price.value(view.result[loop.index-1]) }}</span>
+                                        </div>
+                                </li>
+                               {% endfor %} 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--menu page section end-->

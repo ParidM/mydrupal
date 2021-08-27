@@ -1,0 +1,37 @@
+
+<!--contact us page sec start-->
+<section class="contact-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="main-heading">
+                    <span>{{ content.field_testi_title.0 }}</span>
+                    <h2>{{ content.field_page_title.0 }}</h2>
+                    <img src="{{ file_url(content.field_about_header_image['#items'].entity.uri.value) }}" class="img-responsive">
+                </div>
+                <div class="contact-wrapper">
+                    <p>{{ content.field_about_content.0 }}</p>
+                    <ul>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span>{{ content.field_banner_title.0 }}</span></li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>{{ content.field_about_title.0 }}</span></li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                         <span>{{ content.field_delivery_menu.0 }}</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="main-heading">
+                    <span>{{ content.field_sub_menu_items.0 }}</span>
+                    <h2>{{ content.field_mene_price.0 }}</h2>
+                    <img src="{{ file_url(content.field_about_header_image['#items'].entity.uri.value) }}" class="img-responsive">
+                </div>
+                <div class="subscribe">
+                    {{ content.field_contact_form}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--contact us page sec end-->

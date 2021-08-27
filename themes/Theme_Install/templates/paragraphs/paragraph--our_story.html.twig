@@ -1,0 +1,38 @@
+<!--about section start-->
+<section class="about-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="history-wrapper">
+                    <div class="history text-center">
+                        <div class="main-heading">
+                            <span>{{ content.field_about_sub_title.0 }}</span>
+                            <h2>{{ content.field_about_title.0 }}</h2>
+                            <img src="a{{ file_url(content.field_about_header_image['#items'].entity.uri.value) }}" class="img-responsive">
+                        </div>
+                        <div class="history-content">
+                            <p>{{ content.field_about_content.0 }}</p>
+                            <a href="{{ content.field_about_btn[0]['#url']|render }}">{{ content.field_about_btn[0]['#title']|render }} <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="history-border">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-6">
+                <div class="about-img">
+                    <img src="{{ file_url(content.field_about_full_image['#items'].entity.uri.value) }}" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-6">
+                <div class="about-img">
+                    <ul>
+                        <li><img src="{{ file_url(content.field_about_right_top_image['#items'].entity.uri.value) }}" class="img-responsive"></li>
+                        <li><img src="{{ file_url(content.field_about_right_bottom_image['#items'].entity.uri.value) }}" class="img-responsive"></li>
+                    </ul>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--about section end-->

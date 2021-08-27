@@ -1,0 +1,24 @@
+<!--deal day section start-->
+<section class="deal-day" style="background-image:url('{{ file_url(content.field_free_delivery_bg_image['#items'].entity.uri.value) }}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="deal-content">
+                    <h1>{{ content.field_about_title.0 }}</h1>
+                    <h2>{{ content.field_delivery_menu.0 }}</h2>
+                    <span>{{ content.field_mene_price.0 }} <small>only</small></span>
+                    <a href="{{ content.field_about_btn[0]['#url']|render }}" class="btn btn-sm btn-primary">{{ content.field_about_btn[0]['#title']|render }}</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="deal-img">
+                    <img src="{{ file_url(content.field_menu_item_image['#items'].entity.uri.value) }}" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--deal day section end-->

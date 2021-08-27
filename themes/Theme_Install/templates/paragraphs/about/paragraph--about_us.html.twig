@@ -1,0 +1,33 @@
+<!--about us page section start-->
+<section class="about-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-heading">
+                    <span>{{ content.field_about_sub_title.0 }}</span>
+                    <h2>{{ content.field_about_title.0 }}</h2>
+                    <img src="{{ file_url(content.field_about_header_image['#items'].entity.uri.value) }}" class="img-responsive">
+                </div>
+                <p class="text-center">{{ content.field_about_content.0 }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-content">
+                    <div class="who-we-are">
+                        <h2>{{ content.field_banner_title.0 }}</h2>
+                        <p>{{ content.field_who_we_are_desc.0 }}</p>
+                    </div>
+                    <div class="Why-choose-us">
+                        <h2>{{ content.field_service_list_title.0 }}</h2>
+                        <p>{{ content.field_why_choose_desc.0 }}</p>
+                    </div>
+                </div>
+                <div class="about-pic">
+                    <img src="{{ file_url(content.field_banner_image['#items'].entity.uri.value) }}" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--about us page section end-->

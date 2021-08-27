@@ -1,0 +1,24 @@
+name: YG Restaurant Lite
+base theme: classy
+type: theme
+# core: '8.x'
+description: 'YG Restaurant Lite is modern Drupal 8 theme developed to help you to create a stunning websites for Restaurant. '
+
+regions:
+  highlighted: Highlighted
+  header: Header
+  primary_menu: Primary menu
+  page_title: page title
+  content: Content
+  footer_col_1: footer first
+  footer_col_2: footer second
+  footer_col_3: footer third
+
+libraries:
+  - yg_restaurant_lite/global-styling  
+
+# Information added by Drupal.org packaging script on 2018-11-02
+version: '8.x-1.0'
+core: '8.x'
+project: 'yg_restaurant_lite'
+datestamp: 1541142484
